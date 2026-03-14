@@ -53,13 +53,13 @@ twitter-cli cookies import
 
 1. 打开浏览器，登录 [x.com](https://x.com)
 2. 按 `F12` 打开开发者工具（DevTools）
-3. 切换到 **Application**（应用程序）标签页
-4. 左侧栏找到 **Cookies** → `https://x.com`
-5. 找到 `auth_token` 和 `ct0` 两个 cookie，复制它们的值
+3. 切换到 **Network**（网络）标签页
+4. 刷新页面，随便点击一个 `x.com` 的请求
+5. 在 **Request Headers** 中找到 `Cookie:` 一行，右键复制完整值
 6. 运行：
 
 ```bash
-twitter-cli cookies set "auth_token=你的值; ct0=你的值"
+twitter-cli cookies set "复制的完整 Cookie 值"
 ```
 
 <!-- TODO: 后续补充截图 -->
