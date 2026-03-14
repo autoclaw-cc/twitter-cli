@@ -53,13 +53,13 @@ Automatically extracts Twitter cookies from your local browser and saves them.
 
 1. Open your browser and log in to [x.com](https://x.com)
 2. Press `F12` to open Developer Tools (DevTools)
-3. Switch to the **Application** tab
-4. In the left sidebar, find **Cookies** → `https://x.com`
-5. Find the `auth_token` and `ct0` cookies, copy their values
+3. Switch to the **Network** tab
+4. Refresh the page, click on any `x.com` request
+5. In **Request Headers**, find the `Cookie:` line, right-click and copy the full value
 6. Run:
 
 ```bash
-twitter-cli cookies set "auth_token=your_value; ct0=your_value"
+twitter-cli cookies set "paste_the_full_cookie_value_here"
 ```
 
 <!-- TODO: Add screenshots later -->
